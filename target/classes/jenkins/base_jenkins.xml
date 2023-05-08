@@ -32,7 +32,13 @@
     <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
     <triggers/>
     <concurrentBuild>false</concurrentBuild>
-    <builders/>
+    <builders>
+        <hudson.tasks.Shell>
+            <command>
+                eval "${testCommand}"
+            </command>
+        </hudson.tasks.Shell>
+    </builders>
     <publishers/>
     <buildWrappers/>
 </project>
